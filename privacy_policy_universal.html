@@ -152,6 +152,18 @@
         </ul>
         <p>Each App requests only the permissions it requires. Refer to the App's listing on Google Play for the full list of permissions.</p>
 
+        <h3>7.1 Location &mdash; 오늘 나가도 될까? 미세먼지 외출점수 (GoOut Seoul, <code>com.doun.goout</code>)</h3>
+        <p>This app requests approximate and precise location (<code>ACCESS_COARSE_LOCATION</code>, <code>ACCESS_FINE_LOCATION</code>) for one purpose only: to determine which of Seoul's 25 districts the user is currently in, so that district can be preselected as their "my neighborhood."</p>
+        <ul>
+            <li>Location is read <strong>only when the user explicitly taps "set my neighborhood from current location."</strong> The app never accesses location in the background or while closed.</li>
+            <li>The coordinates are evaluated <strong>on the device</strong> and discarded immediately after the district is determined.</li>
+            <li>Coordinates are <strong>never stored, never logged, and never transmitted</strong> to us or to any third party. The only thing that remains on the device is the resulting district name (for example, "중랑구").</li>
+            <li>This permission is optional. If it is denied, the user can select a district manually from a list and every feature of the app remains available.</li>
+        </ul>
+
+        <h3>7.2 Notifications &mdash; 오늘 나가도 될까? 미세먼지 외출점수 (<code>com.doun.goout</code>)</h3>
+        <p>This app requests notification permission (<code>POST_NOTIFICATIONS</code>) solely to deliver an optional daily morning summary of the user's neighborhood score. The notification is scheduled and generated <strong>on the device</strong>; no push token is created and no server sends messages to the device. The feature can be turned off inside the app at any time.</p>
+
         <h2>8. Data Retention</h2>
         <p>We do not retain any user data on our servers. Local App data is stored on your device and persists until the App is uninstalled or the data is manually cleared. For information about Google AdMob's data retention practices, please refer to <a href="https://policies.google.com/technologies/retention" target="_blank" rel="noopener noreferrer">Google's data retention policy</a>.</p>
 
